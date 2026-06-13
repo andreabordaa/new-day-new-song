@@ -1,15 +1,20 @@
 @import "tailwindcss";
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@theme {
+  --color-cream: #faf9f6;
+  --color-slate: #4a4e69;
+  --color-pink: #ffc8dd;
+  --color-pink-dark: #a85d80;
+  --color-lavendar: #cdb4db;
+  --color-blue: #bde0fe;
+  --color-blue-dark: #5b86ad;
+
+  --font-sans: var(--font-poppins), system-ui, sans-serif;
+  --font-display: var(--font-fredoka), sans-serif;
 }
 
 body {
-  font-family: "Inter", system-ui, sans-serif;
-  background: #faf8f4;
-  color: #44403c;
+  font-family: var(--font-sans);
+  background: var(--color-cream);
+  color: var(--color-slate);
 }
