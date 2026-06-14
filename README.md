@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌅 New Day, New Song
 
-## Getting Started
+A daily music discovery app — every day brings a new song to explore.
 
-First, run the development server:
+**[Live Demo →](https://new-day-new-song.vercel.app/)**
 
-```bash
+## About
+
+New Day, New Song shows a different song every day, pulled from the Genius API. The song of the day is the same for every visitor and stays consistent all day, then changes automatically at midnight — no database required, since the daily pick is generated deterministically from the date itself. Look back at the last 7 days of songs, learn more about the project, or send feedback directly from the site.
+
+This is a complete rebuild of an earlier vanilla HTML/CSS/JS version, rewritten in Next.js with a custom sunset-pastel design system.
+
+## ✨ Features
+
+- 🎵 **Song of the Day** — a new song every day, generated deterministically from the date
+- 📅 **Previous Songs** — browse the last 7 days of picks in a hover-interactive grid
+- 💌 **Feedback form** — sends messages straight to the site owner's inbox via email
+- 🎨 Custom sunset pastel design system with Fredoka + Poppins typography
+
+## 🛠️ Tech Stack
+
+- [Next.js](https://nextjs.org/) (App Router)
+- [Tailwind CSS v4](https://tailwindcss.com/)
+- [Genius API](https://docs.genius.com/) — song data
+- [Resend](https://resend.com/) — feedback emails
+- [Vercel](https://vercel.com/) — hosting & deployment
+
+## 🎨 Design
+
+| Color      | Hex       | Use                    |
+| ---------- | --------- | ---------------------- |
+| Soft White | `#FAF9F6` | Background             |
+| Slate      | `#4A4E69` | Text                   |
+| Light Pink | `#FF87AB` | Accent                 |
+| Lavender   | `#CDB4DB` | Accent / active states |
+| Baby Blue  | `#AAD8EB` | Accent                 |
+
+**Fonts:** [Fredoka](https://fonts.google.com/specimen/Fredoka) for headings, [Poppins](https://fonts.google.com/specimen/Poppins) for body text.
+
+## 🚀 Getting Started
+
+### 1. Clone and install
+
+\`\`\`bash
+git clone https://github.com/andreabordaa/new-day-new-song.git
+cd your-repo-name
+npm install
+\`\`\`
+
+### 2. Set up environment variables
+
+Create a `.env.local` file in the root:
+
+\`\`\`
+GENIUS_ACCESS_TOKEN=your_genius_access_token
+RESEND_API_KEY=your_resend_api_key
+FEEDBACK_EMAIL=your_email@example.com
+\`\`\`
+
+- Get a Genius access token at [genius.com/api-clients](https://genius.com/api-clients)
+- Get a Resend API key at [resend.com](https://resend.com)
+
+### 3. Run the dev server
+
+\`\`\`bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+\`\`\`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+\`\`\`
+app/
+├── page.js # Home — Song of the Day
+├── previous/page.js # Previous Songs grid
+├── about/page.js # About page
+├── feedback/page.js # Feedback form
+├── api/feedback/route.js # Sends feedback emails via Resend
+├── layout.js # Root layout, fonts, metadata
+└── globals.css # Theme tokens & global styles
+components/
+└── Layout.js # Shared nav + footer
+lib/
+└── genius.js # Genius API helpers (song fetching logic)
+\`\`\`
 
-## Learn More
+## 🔭 Roadmap
 
-To learn more about Next.js, take a look at the following resources:
+- [ ] Loading states while fetching song data
+- [ ] Custom 404 page
+- [ ] Audio previews
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 👩‍💻 Author
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built by [Andrea Borda](https://github.com/andreabordaa)
