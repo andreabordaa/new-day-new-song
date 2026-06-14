@@ -41,36 +41,38 @@ This is a complete rebuild of an earlier vanilla HTML/CSS/JS version, rewritten 
 
 ### 1. Clone and install
 
-\`\`\`bash
+```
+bash
 git clone https://github.com/andreabordaa/new-day-new-song.git
 cd your-repo-name
 npm install
-\`\`\`
+```
 
 ### 2. Set up environment variables
 
 Create a `.env.local` file in the root:
 
-\`\`\`
+```
 GENIUS_ACCESS_TOKEN=your_genius_access_token
 RESEND_API_KEY=your_resend_api_key
 FEEDBACK_EMAIL=your_email@example.com
-\`\`\`
+```
 
 - Get a Genius access token at [genius.com/api-clients](https://genius.com/api-clients)
 - Get a Resend API key at [resend.com](https://resend.com)
 
 ### 3. Run the dev server
 
-\`\`\`bash
+```
+bash
 npm run dev
-\`\`\`
+```
 
 Open [http://localhost:3000](http://localhost:3000).
 
 ## 📁 Project Structure
 
-\`\`\`
+```
 app/
 ├── page.js # Home — Song of the Day
 ├── previous/page.js # Previous Songs grid
@@ -83,7 +85,7 @@ components/
 └── Layout.js # Shared nav + footer
 lib/
 └── genius.js # Genius API helpers (song fetching logic)
-\`\`\`
+```
 
 ## 🔭 Roadmap
 
