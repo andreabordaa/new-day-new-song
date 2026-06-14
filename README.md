@@ -87,12 +87,3 @@ lib/
 └── genius.js # Genius API helpers (song fetching logic)
 ```
 
-## 🔭 Roadmap
-
-- [ ] Loading states while fetching song data
-- [ ] Custom 404 page
-- [ ] Audio previews
-
-## 👩‍💻 Author
-
-Built by [Andrea Borda](https://github.com/andreabordaa)
