@@ -11,7 +11,7 @@ export default function Layout({ children }) {
       href={href}
       className={`text-sm font-medium px-4 py-1.5 rounded-full transition-colors ${
         pathname === href
-          ? "bg-lavender text-white"
+          ? "bg-lavendar shadow-sm text-white"
           : "text-slate/50 hover:bg-lavender/10 hover:text-slate"
       }`}
     >
@@ -21,12 +21,12 @@ export default function Layout({ children }) {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="bg-white border-b border-slate/10 sticky top-0 z-50">
-        <div className="max-w-3xl mx-auto px-8 h-16 flex items-center justify-between">
-          <span className="font-display font-bold text-lg bg-gradient-to-br from-pink via-lavender to-blue bg-clip-text text-transparent">
+      <header className="bg-white border-b border-slate/10 shadow-sm sticky top-0 z-50">
+        <div className="max-w-4xl mx-auto px-8 h-16 flex items-center justify-between">
+          <span className="font-display font-bold text-xl bg-linear-to-r from-pink via-lavendar to-blue bg-clip-text text-transparent">
             New Day, New Song
           </span>
-          <nav className="flex gap-1">
+          <nav className="flex gap-1 text-shadow-2xs">
             {navLink("/", "Home")}
             {navLink("/previous", "Previous Songs")}
             {navLink("/about", "About Us")}
@@ -39,7 +39,7 @@ export default function Layout({ children }) {
         {children}
       </main>
 
-      <footer className="bg-white border-t border-slate/10 py-5 text-center text-xs text-slate/40">
+      <footer className="bg-cream border-t border-slate/10 py-4 text-center text-xs text-slate/40">
         <p>©2025 New Day, New Song. All rights reserved</p>
       </footer>
     </div>

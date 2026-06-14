@@ -3,10 +3,10 @@
 @theme {
   --color-cream: #faf9f6;
   --color-slate: #4a4e69;
-  --color-pink: #ffc8dd;
-  --color-pink-dark: #a85d80;
+  --color-pink: #ff87ab;
+  --color-pink-dark: #93445e;
   --color-lavendar: #cdb4db;
-  --color-blue: #bde0fe;
+  --color-blue: #aad8eb;
   --color-blue-dark: #5b86ad;
 
   --font-sans: var(--font-poppins), system-ui, sans-serif;
