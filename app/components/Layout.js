@@ -11,7 +11,7 @@ export default function Layout({ children }) {
       href={href}
       className={`text-sm font-medium px-4 py-1.5 rounded-full transition-colors ${
         pathname === href
-          ? "bg-lavendar shadow-sm text-white"
+          ? "bg-lavender shadow-sm text-white"
           : "text-slate/50 hover:bg-lavender/10 hover:text-slate"
       }`}
     >
@@ -23,7 +23,7 @@ export default function Layout({ children }) {
     <div className="min-h-screen flex flex-col">
       <header className="bg-white border-b border-slate/10 shadow-sm sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-8 h-16 flex items-center justify-between">
-          <span className="font-display font-bold text-xl bg-linear-to-r from-pink via-lavendar to-blue bg-clip-text text-transparent">
+          <span className="font-display font-bold text-xl bg-linear-to-r from-pink via-lavender to-blue bg-clip-text text-transparent">
             New Day, New Song
           </span>
           <nav className="flex gap-1 text-shadow-2xs">
@@ -35,7 +35,7 @@ export default function Layout({ children }) {
         </div>
       </header>
 
-      <main className="flex-1 max-w-3xl w-full mx-auto px-8 py-12">
+      <main className="flex-1 max-w-4xl w-full mx-auto px-8 py-12">
         {children}
       </main>
 
