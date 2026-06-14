@@ -16,7 +16,7 @@ export default async function PreviousSongs() {
         {"This Week's Songs"}
       </h1>
 
-      <p className="text-md font-semibold uppercase tracking-widest text-lavender/60 text-shadow-xs mb-8">
+      <p className="text-md font-semibold uppercase tracking-widest text-lavender text-shadow-xs mb-8">
         {formatShortDate(songs[songs.length - 1]?.date)} -{" "}
         {formatShortDate(songs[0]?.date)}
       </p>
